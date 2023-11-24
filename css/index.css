@@ -1,0 +1,108 @@
+
+body{
+    margin:0 6vw;
+}
+.hero{
+    position: relative;
+
+}
+
+
+.title{
+    font-size: clamp(2rem, 8vw + .5rem, 16rem);
+    font-weight: 100;
+    letter-spacing: -.4vw;
+    text-transform: uppercase;
+    line-height: clamp(2.5rem, 11vw, 16rem);
+    z-index: 100;
+    position: relative;
+    margin: 2rem 0;
+}
+
+h1 span{
+    display: inline-block;
+    z-index: 100;
+
+}
+
+.span-one{
+    margin-left: 8vw;
+
+}
+.span-two{
+    margin-left: 30vw;
+
+}
+.span-three{
+    margin-left: 6vw;
+
+}
+.span-four{
+    margin-left: 20vw;
+
+}
+
+.portrait{
+    position:unset;
+    width:60vw;
+    margin: auto;
+}
+
+.portrait img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+@media screen and (min-width:45rem) {
+    .title{
+        font-size: clamp(2.25rem, 8vw + 1rem, 16rem);
+        font-weight: 100;
+        letter-spacing: -.4vw;
+        text-transform: uppercase;
+        line-height: 9vw;
+        z-index: 100;
+        position: relative;
+        margin: 3rem 0;
+    }
+
+    .portrait{
+        position: absolute;
+        top: 10vw;
+        width:22vw;
+
+    
+        z-index: 0;
+    }
+
+    .span-one{
+        margin:0;
+    
+    }
+    .span-two{
+        margin-left: 30vw;
+    
+    }
+    .span-three{
+        margin-left: 18vw;
+    
+    }
+    .span-four{
+        margin-left: 37vw;
+    
+    }
+
+    .about{
+        margin-top: 10rem;
+        display: flex;
+        gap:33vw;
+    }
+    .about h2{
+        text-transform: uppercase;
+    }
+
+    p{
+        font-size: 1.5rem;
+    }
+}
