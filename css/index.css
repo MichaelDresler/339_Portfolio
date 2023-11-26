@@ -55,6 +55,31 @@ h1 span{
 
 
 
+
+.card-image img{
+width: auto;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.work{
+    margin-top: 10rem;
+    display: grid;
+    gap:2rem;
+}
+
+.work p {
+    max-width: 28rem;
+}
+.card{
+    height:75vh;
+    background-color: red;
+    overflow: hidden;
+}
+
+
+
 @media screen and (min-width:45rem) {
     .title{
         font-size: clamp(2.25rem, 8vw + 1rem, 16rem);
@@ -93,16 +118,36 @@ h1 span{
     
     }
 
+
+
     .about{
         margin-top: 10rem;
-        display: flex;
-        gap:33vw;
+        display: grid;
+        grid-template-columns: 1fr 1.33fr;
     }
     .about h2{
         text-transform: uppercase;
     }
 
     p{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
+
+    .work{
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    /* .card{
+        display: grid;
+        grid-template-columns: 1fr 1.33fr;
+    }
+
+    .card-description{
+        padding-top:8rem;
+    }
+
+    .right{
+        grid-template-columns: 1.33fr 1fr;
+    } */
 }

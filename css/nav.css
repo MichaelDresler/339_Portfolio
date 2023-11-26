@@ -9,7 +9,7 @@
 padding:2rem 0;
   /* position: sticky; */
   top: 0;
-  background-color: var(--zinc-950);
+  background-color: transparent;
   z-index: 100000;
 }
 

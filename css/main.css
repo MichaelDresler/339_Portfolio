@@ -1,6 +1,9 @@
 :root{
     font-family: "univers";
-    color: #2C2C2C;;
+    color: #333333;
+}
+html{
+    scroll-behavior: smooth;
 }
 
 p{
@@ -9,4 +12,8 @@ p{
 
 a{
     color: #2C2C2C;
+}
+
+.upper{
+    text-transform: uppercase;
 }

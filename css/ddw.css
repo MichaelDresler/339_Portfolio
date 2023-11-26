@@ -1,0 +1,37 @@
+
+
+.ddw-hero{
+    position: sticky;
+
+    width: 100vw;
+    height: 100vh;
+    /* left: 50%;
+    transform: translate(-50%, 0); */
+    top: 0;
+    background-color: black;
+}
+
+#animation{
+    height: 100%;
+}
+
+main{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding:1rem 10rem
+}
+
+.about{
+    height: 100rem;
+
+
+}
+
+h1{
+    font-size: 5rem;
+    font-weight: 100;
+    letter-spacing: -.3rem;
+
+    /* z-index: 2; */
+}
