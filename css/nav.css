@@ -74,7 +74,7 @@ footer .links a {
     z-index: 1000;
     padding: min(10vh, 10rem) 2rem;
     inset: 0 0 0 0;
-    background-color: var(--zinc-900);
+    background-color: var(--primary-color);
     transform: translateY(100%);
     transition: transform 0.2s ease-out;
   }
@@ -97,6 +97,6 @@ footer .links a {
 
   .mobile-nav-toggle:hover,
   .mobile-nav-toggle:focus {
-    background-color: var(--zinc-600);
+    background-color: var(--primary-color);
   }
 }

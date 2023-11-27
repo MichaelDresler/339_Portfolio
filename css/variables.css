@@ -1,0 +1,16 @@
+/* :root[data-theme= "dark"]{
+    --color-primary:white;
+    --color-primary-dark:rgb(26, 26, 26);
+
+}
+
+:root[data-theme= "light"]{
+    --color-primary:rgb(26, 26, 26);
+    --color-primary-dark:white
+
+}
+
+:root {
+    font-family: "univers";
+    --default-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
+} */

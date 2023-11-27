@@ -6,7 +6,7 @@ function curse() {
   var children = document.querySelectorAll(".cursor-item");
 
 
-  var divs = document.querySelectorAll("a,.portrait");
+  var divs = document.querySelectorAll("a,.portrait,.can-hover");
   for (var i = 0; i < divs.length; i++) {
 
     divs[i].addEventListener("mouseenter", function (e) {
@@ -57,7 +57,6 @@ const mouseCursor = document.querySelector(".cursor-container");
 function mouseMoveHandler(e) {
     mouseCursor.style.top = "calc(" + e.clientY + "px - 5px)";
     mouseCursor.style.left = "calc(" + e.clientX + "px - 5px)";
-    console.log(isHovering);
 
   }
 
@@ -67,7 +66,7 @@ function mouseMoveHandler(e) {
       if (!isHovering) {
         mouseCursor.style.top = "calc(" + e.clientY + "px - 5px)";
         mouseCursor.style.left = "calc(" + e.clientX + "px - 5px)";
-        console.log("checking");
+
       }
     }
   

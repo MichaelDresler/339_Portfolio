@@ -100,8 +100,9 @@ init();
 // );
 
 function changeImage() {
+  // !tween.isActive()
   gsap.set(".load-grid", { display: "grid" });
-  if (!tween.isActive()) {
+  if (true) {
     tweenChange = gsap.fromTo(
       ".grid-item",
       {

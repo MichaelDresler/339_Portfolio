@@ -1,7 +1,4 @@
-:root{
-    font-family: "univers";
-    color: #333333;
-}
+
 html{
     scroll-behavior: smooth;
 }
@@ -11,7 +8,7 @@ p{
 }
 
 a{
-    color: #2C2C2C;
+    color: var(--color-primary)
 }
 
 .upper{

@@ -1,7 +1,29 @@
+/* @import url(variables.css); */
+:root[data-theme= "dark"]{
+    --color-primary:white;
+    --color-primary-dark:rgb(26, 26, 26);
+    color:var(--color-primary);
+    background-color: var(--color-primary-dark);
+
+}
+
+:root[data-theme= "light"]{
+    --color-primary:rgb(26, 26, 26);
+    --color-primary-dark:white;
+    color:var(--color-primary);
+    background-color: var(--color-primary-dark);
+
+}
+
+:root {
+    font-family: "univers";
+    --default-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
+}
 
 body{
     margin:0 6vw;
-    /* cursor: none; */
+    cursor: none;
+    transition: var(--default-transition);
 }
 .hero{
     position: relative;
@@ -98,6 +120,16 @@ a,ul,li{
     transition: translate() .5s;
 }
 
+.can-hover{
+    /* transition: var(--default-e); */
+
+}
+
+#theme-switcher{
+    /* transition: var(--default-transition); */
+
+}
+
 
 
 .card-image img{
@@ -135,15 +167,6 @@ width: auto;
     .cursor-parent{
         position: unset;
 
-        /* width:1rem;
-        height: 1rem; */
-        /* aspect-ratio: 1; */
-        /* position: relative; */
-
-        /* display: grid;
-        transition: translate() .5s;
-        grid-template-columns: 1fr 1fr; */
-
     }
     .cursor-item{
         position: absolute;
@@ -152,8 +175,8 @@ width: auto;
         /* transition: translate() .5s; */
     }
     .cursor-item:nth-child(1){
-        border-top: 1.5px solid rgb(22, 22, 22);
-        border-left: 1.5px solid rgb(22, 22, 22);
+        border-top: 1.5px solid var(--color-primary);
+        border-left: 1.5px solid var(--color-primary);
         top: 0;
         left: 0;
 
@@ -166,8 +189,8 @@ width: auto;
     }
 
     .cursor-item:nth-child(2){
-        border-top: 1.5px solid rgb(22, 22, 22);
-        border-right: 1.5px solid rgb(22, 22, 22);
+        border-top: 1.5px solid var(--color-primary);
+        border-right: 1.5px solid var(--color-primary);
 /* 
         right:0;
         top:0; */
@@ -178,15 +201,15 @@ width: auto;
 
     }
     .cursor-item:nth-child(3){
-        border-bottom: 1.5px solid rgb(22, 22, 22);
-        border-left: 1.5px solid rgb(22, 22, 22);
+        border-bottom: 1.5px solid var(--color-primary);
+        border-left: 1.5px solid var(--color-primary);
 
  
         transition: .5s;
     }
     .cursor-item:nth-child(4){
-        border-bottom: 1.5px solid rgb(22, 22, 22);
-        border-right: 1.5px solid rgb(22, 22, 22);
+        border-bottom: 1.5px solid var(--color-primary);
+        border-right: 1.5px solid var(--color-primary);
         top: 100%;
         left: 100%;
         transition: .5s;
