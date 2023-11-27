@@ -13,7 +13,7 @@ body{
     font-weight: 100;
     letter-spacing: -.4vw;
     text-transform: uppercase;
-    line-height: clamp(2.5rem, 11vw, 16rem);
+    line-height: clamp(2.5rem, 9vw, 12rem);
     margin: 2rem 0;
 }
 
@@ -44,7 +44,7 @@ h1 span{
 .portrait{
     cursor: pointer;
     position: relative;
-    max-width: 65vw;
+    max-width: 32rem;
     margin: auto;
 
     z-index: 100;

@@ -39,7 +39,7 @@ function init() {
 
         stagger: {
           repeat: 1,
-          repeatDelay: 0.1,
+          repeatDelay: 0.01,
           yoyo: true,
           grid: "auto",
           from: "start",
@@ -49,7 +49,7 @@ function init() {
       }
     );
     console.log(tween.isActive());
-    setTimeout(init, 8000);
+    setTimeout(init, 6000);
 
 }
 
