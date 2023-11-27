@@ -32,7 +32,7 @@ function init() {
         duration: duration,
       },
       {
-        opacity: 1,
+        opacity: 0.8,
         // repeat:-1,
         // repeatDelay:1,
         // duration:0.2,
@@ -48,20 +48,19 @@ function init() {
         },
       }
     );
-    console.log(tween.isActive());
+
     setTimeout(init, 8000);
 
 }
 
 init();
-function my(){
-    console.log("highlight " + tween.isActive());
-console.log(tweenChange.isActive());
-setTimeout(my, 1000)
+// function my(){
+// console.log(tweenChange.isActive());
+// setTimeout(my, 1000)
 
 
-}
-my();
+// }
+// my();
 // gsap.fromTo(
 //   ".grid-item",
 //   {
