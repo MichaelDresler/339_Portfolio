@@ -17,7 +17,7 @@
 
 :root {
     font-family: "univers";
-    --default-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
+    --default-transition: color .3s ease-in-out, background-color .3s, ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
 }
 
 body{
