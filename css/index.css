@@ -21,13 +21,32 @@
 }
 
 body{
-    margin:0 6vw;
+    /* margin:0 6vw;/ */
     cursor: none;
     transition: var(--default-transition);
 }
 .hero{
     position: relative;
     
+}
+
+main{
+    margin:0 3vw;
+}
+
+#canvas1{
+    position:fixed;
+    z-index: 202202002;
+    /* box-sizing: border-box; */
+    /* border: 20px solid red; */
+    /* top:50%;
+    left:50%;
+    transform: translate(-50%, -50%); */
+    pointer-events: none;
+
+    /* width:100vw;
+    height: 100vh; */
+    margin: 0;
 }
 
 

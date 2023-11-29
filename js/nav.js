@@ -48,7 +48,7 @@ function init() {
         },
       }
     );
-    console.log(tween.isActive());
+    // console.log(tween.isActive());
     setTimeout(init, 5500);
 
 }
