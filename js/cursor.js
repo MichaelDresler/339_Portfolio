@@ -9,6 +9,7 @@ function curse() {
   var divs = document.querySelectorAll("a,.portrait,.can-hover");
   for (var i = 0; i < divs.length; i++) {
 
+<<<<<<< Updated upstream
     divs[i].addEventListener("mouseenter", function (e) {
       var rect = this.getBoundingClientRect();
       console.log("w")
@@ -48,6 +49,27 @@ function curse() {
 
 
     });
+=======
+    }
+    else if(this.id == "tl"){
+      ctx.moveTo(this.x, this.y - this.size);                  // Move to top-left corner
+      ctx.lineTo(this.x-this.size,this.y - this.size);      // Draw top side
+      ctx.lineTo(this.x-this.size,this.y );      // Draw top side
+ 
+    }
+    else if(this.id == "bl"){
+      ctx.moveTo(this.x, this.y + this.size);                  // Move to top-left corner
+      ctx.lineTo(this.x -this.size,this.y + this.size);      // Draw top side
+      ctx.lineTo(this.x-this.size,this.y  );      // Draw top side
+ 
+    }
+    ctx.stroke();
+
+    ctx.strokeStyle = stroke
+    // ctx.closePath();
+    // ctx.fillRect(this.x,this.y,this.size,this.size)
+    // ctx.fill();
+>>>>>>> Stashed changes
 
   }
 }
