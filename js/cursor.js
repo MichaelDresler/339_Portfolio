@@ -1,4 +1,4 @@
-const canvas = document.getElementById("canvas1")
+const canvas = document.querySelector(".canvas1")
 const ctx = canvas.getContext('2d');
 let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
@@ -55,11 +55,8 @@ class Corner {
  
     }
     ctx.stroke();
-    console.log(stroke)
+
     ctx.strokeStyle = stroke
-    // ctx.closePath();
-    // ctx.fillRect(this.x,this.y,this.size,this.size)
-    // ctx.fill();
 
   }
   setPos(x, y) {
@@ -135,13 +132,14 @@ function animate() {
 
 
 
-var divs = document.querySelectorAll("a, .portrait, .can-hover");
+var divs = document.querySelectorAll(".portrait, .can-hover, a");
 
 for (var i = 0; i < divs.length; i++) {
   divs[i].addEventListener("mouseenter", function (e) {
      rect = this.getBoundingClientRect();
+     console.log(rect)
     hovering = true
-    damp = 0.04
+    damp = 0.08
   });
       divs[i].addEventListener("mouseleave", function (e) {
         bRightCorner.moveTo(rect.right, rect.bottom)
@@ -149,7 +147,7 @@ for (var i = 0; i < divs.length; i++) {
         bLeftCorner.moveTo(rect.left, rect.bottom)
         tLeftCorner.moveTo(rect.left, rect.top)
         hovering = false
-        damp = 0.1
+        damp = 0.5
 
       });
         

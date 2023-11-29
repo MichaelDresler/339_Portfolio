@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme = 'light'>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michael Dresler</title>
 
+    <script>
+      let localS = localStorage.getItem("theme");
+      if(localS === "dark"){
+        document.documentElement.setAttribute('data-theme', "dark")
+      }
+      </script>
     <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
     <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
@@ -12,13 +18,17 @@
     <link rel="stylesheet" type="text/css" href="./css/ddw.css" />
 
     <script src="js/nav.js" defer></script>
+    <script src="js/darkmode.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.28/bundled/lenis.min.js"></script> 
+
     <!-- <script src="js/lenis.js"></script> -->
   </head>
 
   <body>
-    <!-- <header class="primary-header" id="navbar">
+    <canvas class="canvas1"></canvas>
+    <header class="primary-header" id="navbar">
       <span class="justify-start"
         ><a href="index.html">Michael Dresler</a></span>
 
@@ -29,9 +39,10 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="shop.html">Work</a></li>
+          <li><div class="can-hover" id="theme-switcher">Light</div></li>
         </ul>
       </nav>
-    </header> -->
+    </header>
 
     <noscript>
       <header class="nojs">
@@ -45,17 +56,133 @@
     </noscript>
 
     <div class="ddw-hero">
-        <div id="animation">
-          <script src="js/animation.js"></script>
-        </div>
+      <div id="animation">
+        <script src="js/animation.js"></script>
       </div>
+    </div>
 
-    <main id="about">
-      <section class="about" >
-        <h1>Dutch Design Week — Branding & visual identity microsite </h1>
-        <p>
-            In this second-year information design class, we worked on a 5-week project to create a captivating microsite for Dutch Design Week, an annual design conference. Our main objective was to develop an expressive microsite that effectively showcased the event. The first three weeks involved extensive visual experimentation, exploring different design qualities and aesthetics. In the following two weeks, we focused on developing interactions and prototyping for the web. This phase included transforming our visual concepts into functional elements to ensure a seamless and engaging user experience.            In this second-year information design class, we worked on a 5-week project to create a captivating microsite for Dutch Design Week, an annual design conference. Our main objective was to develop an expressive microsite that effectively showcased the event. The first three weeks involved extensive visual experimentation, exploring different design qualities and aesthetics. In the following two weeks, we focused on developing interactions and prototyping for the web. This phase included transforming our visual concepts into functional elements to ensure a seamless and engaging user experience.            In this second-year information design class, we worked on a 5-week project to create a captivating microsite for Dutch Design Week, an annual design conference. Our main objective was to develop an expressive microsite that effectively showcased the event. The first three weeks involved extensive visual experimentation, exploring different design qualities and aesthetics. In the following two weeks, we focused on developing interactions and prototyping for the web. This phase included transforming our visual concepts into functional elements to ensure a seamless and engaging user experience.            In this second-year information design class, we worked on a 5-week project to create a captivating microsite for Dutch Design Week, an annual design conference. Our main objective was to develop an expressive microsite that effectively showcased the event. The first three weeks involved extensive visual experimentation, exploring different design qualities and aesthetics. In the following two weeks, we focused on developing interactions and prototyping for the web. This phase included transforming our visual concepts into functional elements to ensure a seamless and engaging user experience.
-        </p>
+    <main>
+      <h1>
+        Dutch Design Week —
+        <span class="nl">Branding & visual identity microsite</span>
+      </h1>
+      <section class="about">
+
+        <div id="project-description">
+          <h2>About</h2>
+          <p>
+            In this second-year information design class, we worked on a 5-week
+            project to create a captivating microsite for Dutch Design Week, an
+            annual design conference. The project aimed to establish an
+            intuitive and comprehensive platform that guided visitors through
+            the diverse offerings of the festival which hosts over 100 events
+            with a global audience. In the creation of the Dutch Design Week
+            microsite, I played a pivotal role in shaping the interaction
+            design, developing mockups, incorporating motion design, and
+            contributing to research.
+          </p>
+        </div>
+        <div id="roles">
+          <div>
+            <h3>Team</h3>
+            <ul>
+              <li>Michael Dresler,</li>
+              <li>Madeline Ho,</li>
+              <li>Brianna Mei,</li>
+              <li>Christina Raganit,  </li>
+              <li>Simon Wong</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Role</h3>
+            <ul>
+              <li>Interaction design</li>
+              <li>Mockups</li>
+              <li>Research</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Tools</h3>
+            <ul>
+              <li>Figma</li>
+              <li>Photoshop</li>
+              <li>After Effects</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Timeline</h3>
+            <ul>
+              <li>5 Weeks</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="title">
+          <h2>Content Design</h2>
+          <p>
+            Our goal was to empower visitors with a strategic planning tool.
+            Utilizing content design, we provide detailed insights into
+            schedules, locations, and unique aspects of each exhibition. This
+            approach allows attendees to optimize their schedules, making the
+            most of their time at Dutch Design Week.
+          </p>
+        </div>
+        <div class="card left">
+          <div class="image"></div>
+          <h3>Navigation</h3>
+          <p>
+            The dropdown navigation helps declutter the homepage and offer a
+            dedicated space for easy navigation. The animation of typography
+            within the dropdown also adds dynamism, making the navigation
+            experience more memorable.
+          </p>
+        </div>
+        <div class="card Right">
+          <div class="image"></div>
+          <h3>Event Page</h3>
+          <p>
+            The event page served as a dynamic planning tool, organized by date
+            and time, with alphabetical ordering for simultaneous events. Filter
+            chips were introduced, allowing users to customize their exploration
+            based on date, time, discipline, and location. .
+          </p>
+        </div>
+        <div class="card left">
+          <div class="image"></div>
+          <h3>Personalized Itinerary</h3>
+          <p>
+            Recognizing the vastness of Dutch Design Week, the itinerary aims to
+            offer attendees a tool that not only optimizes their schedules but
+            also fosters a sense of personalization and control over their
+            festival experience..
+          </p>
+        </div>
+        <div class="card right">
+          <div class="image"></div>
+          <h3>Navigation</h3>
+          <p>
+            The dropdown navigation helps declutter the homepage and offer a
+            dedicated space for easy navigation. The animation of typography
+            within the dropdown also adds dynamism, making the navigation
+            experience more memorable.
+          </p>
+        </div>
+      </section>
+      <section class="assets">
+        <div class="title">
+          <h2>Graphic Assets</h2>
+          <p>
+            When creating mockups, my focus shifted towards identifying
+            locations and landmarks in the Netherlands that held cultural
+            relevance, ensuring that every visual element communicated a
+            connection to the rich tapestry of Dutch culture.
+          </p>
+        </div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
       </section>
     </main>
     <footer></footer>

@@ -1,10 +1,50 @@
 
+/* @import url(variables.css); */
+:root[data-theme= "dark"]{
+    --color-primary:white;
+    --color-primary-dark:rgb(26, 26, 26);
+    color:var(--color-primary);
+    background-color: var(--color-primary-dark);
+
+}
+
+:root[data-theme= "light"]{
+    --color-primary:rgb(26, 26, 26);
+    --color-primary-dark:white;
+    color:var(--color-primary);
+    background-color: var(--color-primary-dark);
+
+}
+
+:root {
+    font-family: "univers";
+    --default-transition: color .3s ease-in-out, background-color .3s, ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
+}
 html{
     scroll-behavior: smooth;
 }
+li,ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-p{
+.canvas1{
+    position:fixed;
+    z-index: 202202002;
+
+    pointer-events: none;
+
+    /* width:100vw;
+    height: 100vh; */
+    margin: 0;
+}
+
+p,li{
     font-family: "univers-light";
+}
+P{
+    font-size: 1.25rem
 }
 
 a{
@@ -13,4 +53,25 @@ a{
 
 .upper{
     text-transform: uppercase;
+}
+
+.nl{
+    display: inline-block;
+}
+
+
+@media screen and (min-width: 30rem){
+    P{
+        font-size: calc(1.25rem + 10 * (100vw - 30rem) / 760);
+    }
+    
+
+}
+
+
+@media screen and (min-width: 77rem){
+    P{
+        font-size: 1.5rem
+    }
+    
 }

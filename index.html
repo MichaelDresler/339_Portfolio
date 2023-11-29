@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michael Dresler</title>
 
+    <script>
+      let localS = localStorage.getItem("theme");
+      if(localS === "dark"){
+        document.documentElement.setAttribute('data-theme', "dark")
+      }
+      </script>
+
     <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
     <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="./css/nav.css" />
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
-    <link rel="stylesheet" type="text/css" href="./css/variables.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./css/variables.css" /> -->
 
     <script src="js/nav.js" defer></script>
     <script src="js/cursor.js" defer></script>
@@ -21,7 +28,7 @@
     <!-- <script src="js/lenis.js"></script> -->
   </head>
   <body>
-    <canvas id="canvas1" width="1000" height="800"></canvas>
+    <canvas class="canvas1"></canvas>
     <!-- <div class="cursor-container">
       <div class="cursor-parent">
         <div class="cursor-item"></div>
@@ -157,12 +164,12 @@
           </p>
         </section>
         <section class="work">
-          <div class="card">
+          <div class="card can-hover">
             <div class="card-image">
-              <!-- <a href="ddw.html"><img src="images/ddw_poster.png" alt=""></a> -->
+              <a href="ddw.html"><img src="images/ddw_poster.png" alt=""></a>
             </div>
           </div>
-          <div class="card">
+          <div class="card can-hover">
             <div class="card-description">
             </div>
             <div class="card-image ">

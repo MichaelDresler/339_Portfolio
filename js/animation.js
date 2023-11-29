@@ -3,17 +3,17 @@ var ddw=lottie.loadAnimation({
     renderer: 'svg',
     loop: false,
     autoplay: true,
-    path: 'ddw.json'
+    path: 'work.json'
 
   })
 
 
 
- ddw.addEventListener("complete",e => {
-  setTimeout(()=> {
-    document.getElementById("about").scrollIntoView();
-  },500)
- })
+//  ddw.addEventListener("complete",e => {
+//   setTimeout(()=> {
+//     document.querySelector("main").scrollIntoView();
+//   },500)
+//  })
 
 //  ddw.removeEventListener();
 //  console.log(ddw)

@@ -1,28 +1,8 @@
-/* @import url(variables.css); */
-:root[data-theme= "dark"]{
-    --color-primary:white;
-    --color-primary-dark:rgb(26, 26, 26);
-    color:var(--color-primary);
-    background-color: var(--color-primary-dark);
 
-}
-
-:root[data-theme= "light"]{
-    --color-primary:rgb(26, 26, 26);
-    --color-primary-dark:white;
-    color:var(--color-primary);
-    background-color: var(--color-primary-dark);
-
-}
-
-:root {
-    font-family: "univers";
-    --default-transition: color .3s ease-in-out, background-color .3s, ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
-}
 
 body{
     /* margin:0 6vw;/ */
-    cursor: none;
+    /* cursor: none; */
     transition: var(--default-transition);
 }
 .hero{
@@ -34,20 +14,7 @@ main{
     margin:0 3vw;
 }
 
-#canvas1{
-    position:fixed;
-    z-index: 202202002;
-    /* box-sizing: border-box; */
-    /* border: 20px solid red; */
-    /* top:50%;
-    left:50%;
-    transform: translate(-50%, -50%); */
-    pointer-events: none;
 
-    /* width:100vw;
-    height: 100vh; */
-    margin: 0;
-}
 
 
 .title{
@@ -123,6 +90,7 @@ h1 span{
     z-index: 0;
     position: absolute;
     left: 0;
+    height:100%
 }
 
 .grid-item{
@@ -284,9 +252,6 @@ width: auto;
         letter-spacing: -.1rem;
     }
 
-    p{
-        font-size: 1.25rem;
-    }
 
     .work{
         grid-template-columns: 1fr 1fr;

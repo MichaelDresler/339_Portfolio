@@ -1,12 +1,17 @@
-
+body{
+    color:var(--color-primary)
+    
+}
+section{
+    margin-bottom: 14rem;
+}
 
 .ddw-hero{
     position: sticky;
-
     width: 100vw;
-    height: 100vh;
-    /* left: 50%;
-    transform: translate(-50%, 0); */
+    height: 50vh;
+    /* fixes scrolling bug */
+    transform: translate3d(0, 0, 0); 
     top: 0;
     background-color: black;
 }
@@ -18,20 +23,99 @@
 main{
     position: sticky;
     top: 0;
-    background-color: white;
-    padding:1rem 10rem
+    background-color: var(--color-primary-dark);
+    padding:2vw
 }
 
-.about{
-    height: 100rem;
 
 
-}
+ .image{
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: black;
+ }
 
 h1{
-    font-size: 5rem;
-    font-weight: 100;
-    letter-spacing: -.3rem;
+    font-size: 2.125rem;
+    font-weight: 400;
+    letter-spacing: -.3vw;
+    line-height: 1.05;
+    margin-bottom:4rem ;
 
     /* z-index: 2; */
 }
+
+#roles h3{
+    margin:1.25rem 0 ;
+}
+
+.title {
+    max-width: 54rem;
+
+}
+
+
+@media screen and (min-width: 30rem){
+    P{
+        font-size: calc(1rem + 10 * (100vw - 30rem) / 760);
+    }
+    h1{
+        font-size: calc(1rem + 48 * (100vw - 30rem) / 760);
+
+    }
+
+    #roles{
+        margin-top: 10.25rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+}
+
+
+
+
+
+@media screen and (min-width: 77rem){
+
+    .ddw-hero{
+        height: 100vh;
+    }
+    .about{
+        /* padding-right: 30vw; */
+        max-width: 124rem;
+    }
+
+    #project-description{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+
+    #project-description p{
+
+    }
+    p,li{
+        font-size: 1.5rem;
+    }
+
+
+
+}
+
+@media screen and (min-width: 130rem){
+    h1 {
+        font-size: 8rem;
+        /* letter-spacing: -.5rem; */
+    }
+}
+
+
