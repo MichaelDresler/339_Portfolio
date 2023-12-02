@@ -2,6 +2,8 @@ const canvas = document.querySelector(".canvas1")
 const ctx = canvas.getContext('2d');
 let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+// var scrollTop = (window.scrollY !== undefined) ? window.scrollY : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+
 canvas.width = vw;
 canvas.height = vh
 // canvas.style.width = vw + "px"; 
@@ -26,6 +28,12 @@ class Corner {
   }
   draw() {
     ctx.beginPath();
+    if(hovering){
+      this.size = (rect.width)/18
+    }
+    else{
+      this.size = 10;
+    }
    let stroke = getComputedStyle(document.documentElement)
     .getPropertyValue('--color-primary');
     if(this.id == "br"){
@@ -33,20 +41,16 @@ class Corner {
       ctx.moveTo(this.x, this.y + this.size);                  // Move to top-left corner
       ctx.lineTo(this.x+this.size,this.y + this.size);      // Draw top side
       ctx.lineTo(this.x+this.size,this.y );      // Draw top side
-
-  
     }
     else if(this.id == "tr"){
       ctx.moveTo(this.x, this.y - this.size);                  // Move to top-left corner
       ctx.lineTo(this.x+this.size,this.y - this.size);      // Draw top side
       ctx.lineTo(this.x+this.size,this.y );      // Draw top side
-
     }
     else if(this.id == "tl"){
       ctx.moveTo(this.x, this.y - this.size);                  // Move to top-left corner
       ctx.lineTo(this.x-this.size,this.y - this.size);      // Draw top side
       ctx.lineTo(this.x-this.size,this.y );      // Draw top side
- 
     }
     else if(this.id == "bl"){
       ctx.moveTo(this.x, this.y + this.size);                  // Move to top-left corner
@@ -54,6 +58,7 @@ class Corner {
       ctx.lineTo(this.x-this.size,this.y  );      // Draw top side
  
     }
+    ctx.lineWidth = 1.5;
     ctx.stroke();
 
     ctx.strokeStyle = stroke
@@ -63,6 +68,7 @@ class Corner {
     this.x = x;
     this.y = y;
   }
+  
 
   moveTo(targetX, targetY) {
     let dx = targetX - this.x;
@@ -121,25 +127,25 @@ function animate() {
     tLeftCorner.moveTo(rect.left, rect.top)
   } 
 
-
+  
   bRightCorner.draw();
   bLeftCorner.draw();
   tRightCorner.draw();
   tLeftCorner.draw();
   requestAnimationFrame(animate);
-  // console.log(corner.x)
+  console.log(window.scrollY)
 }
 
 
 
-var divs = document.querySelectorAll(".portrait, .can-hover, a");
+var divs = document.querySelectorAll(".portrait, .can-hover");
 
 for (var i = 0; i < divs.length; i++) {
   divs[i].addEventListener("mouseenter", function (e) {
      rect = this.getBoundingClientRect();
-     console.log(rect)
+     console.log(this)
     hovering = true
-    damp = 0.08
+    damp = 0.04
   });
       divs[i].addEventListener("mouseleave", function (e) {
         bRightCorner.moveTo(rect.right, rect.bottom)
@@ -147,7 +153,7 @@ for (var i = 0; i < divs.length; i++) {
         bLeftCorner.moveTo(rect.left, rect.bottom)
         tLeftCorner.moveTo(rect.left, rect.top)
         hovering = false
-        damp = 0.5
+        damp = 0.05
 
       });
         
@@ -163,7 +169,6 @@ function reportWindowSize() {
 window.onresize = reportWindowSize;
 
 animate();
-
 
 // var isHovering = false;
 // function curse() {

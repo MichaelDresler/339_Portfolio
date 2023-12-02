@@ -1,20 +1,3 @@
-const primaryNav = document.querySelector(".primary-nav");
-const navToggle = document.querySelector(".mobile-nav-toggle");
-document.getElementById("navbar").style.display = "flex";
-
-navToggle.addEventListener("click", () => {
-  const visibility = primaryNav.getAttribute("data-visible");
-
-  if (visibility === "false") {
-    primaryNav.setAttribute("data-visible", true);
-  } else if (visibility === "true") {
-    primaryNav.setAttribute("data-visible", false);
-  }
-});
-
-
-let duration = 0.5;
-
 var tween;
 var tweenChange;
 
@@ -31,9 +14,7 @@ function init() {
       },
       {
         opacity: 0.8,
-        // repeat:-1,
-        // repeatDelay:1,
-        // duration:0.2,
+    
 
         stagger: {
           repeat: 1,
@@ -46,56 +27,13 @@ function init() {
         },
       }
     );
-    // console.log(tween.isActive());
+
     setTimeout(init, 5500);
 
 }
 
 init();
-// function my(){
-// console.log(tweenChange.isActive());
-// setTimeout(my, 1000)
 
-
-// }
-// my();
-// gsap.fromTo(
-//   ".grid-item",
-//   {
-//     opacity: 1,
-
-//   },
-//   {
-
-//     opacity: 0,
-//     duration: 0.5,
-//     stagger: { amount: 0.5, from: "random" },
-//     onComplete: () => {
-//         gsap.fromTo(
-//             ".grid-item",
-//         {
-//             opacity: 0,
-
-//         },
-//         {
-//             opacity: 1,
-//             // repeat:-1,
-//             // repeatDelay:3,
-
-//             stagger: {
-//              repeat:-1,
-//              repeatDelay:2,
-//               grid: "auto",
-//               from: "start",
-//               ease: "none",
-//               each:.2,
-//             }
-
-//         }
-//           );
-//     }
-//   }
-// );
 
 function changeImage() {
   // !tween.isActive()

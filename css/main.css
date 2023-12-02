@@ -40,12 +40,12 @@ li,ul {
     margin: 0;
 }
 
-p,li{
+p,li,header a{
     font-family: "univers-light";
 }
-P{
+/* p,a,ul,li{
     font-size: 1.25rem
-}
+} */
 
 a{
     color: var(--color-primary)
