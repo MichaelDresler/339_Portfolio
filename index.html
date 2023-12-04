@@ -27,12 +27,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
     <!-- <script src="js/lenis.js"></script> -->
   </head>
-  <body>
+  <body onresize="resize()">
     <canvas class="canvas1"></canvas>  
       <main>
         <header class="primary-header" id="navbar">
-          <span class="justify-start"
-            ><a class="can-hover" href="index.html">Michael Dresler</a></span>
+          <span class="justify-start">
+            <li><a class="can-hover" href="index.html">Michael Dresler</a></li>
+          </span>
     
           <button class="mobile-nav-toggle can-hover" aria-label="navigation"></button>
     
@@ -42,6 +43,7 @@
               <li><a class="can-hover" href="contact.html">Contact</a></li>
               <li><a class="can-hover" href="ddw.html">Work</a></li>
               <li><div class="can-hover" id="theme-switcher">Light</div></li>
+
             </ul>
           </nav>
         </header>
@@ -50,7 +52,7 @@
           <header class="nojs">
             <nav class="links">
               <a href="./index.html">Home</a>
-              <a href="#">About</a>
+              <a href="#about">About</a>
               <a href="./contact.html">Contact</a>
               <a href="./shop.html">Shop</a>
             </nav>
@@ -115,27 +117,36 @@
               <div class="grid-item"></div>
             </div>
             <img id="michael1"
-            sizes="(max-width: 1792px) 100%, 1792px"
+            sizes="(min-width: 45rem) 21.01vw, (min-width: 38.75rem) 32rem, calc(82.67vw + 2rem)"
             srcset="
-              /images/michael1/michael1_qoevng_c_scale,w_200.jpg 200w,
-              /images/michael1/michael1_qoevng_c_scale,w_477.jpg 477w,
-              /images/michael1/michael1_qoevng_c_scale,w_677.jpg 677w,
-              /images/michael1/michael1_qoevng_c_scale,w_850.jpg 850w,
-              /images/michael1/michael1_qoevng_c_scale,w_1103.jpg 1103w,
-              /images/michael1/michael1_qoevng_c_scale,w_1254.jpg 1254w,
-              /images/michael1/michael1_qoevng_c_scale,w_1345.jpg 1345w,
-              /images/michael1/michael1_qoevng_c_scale,w_1463.jpg 1463w,
-              /images/michael1/michael1_qoevng_c_scale,w_1541.jpg 1541w,
-              /images/michael1/michael1_qoevng_c_scale,w_1633.jpg 1633w,
-              /images/michael1/michael1_qoevng_c_scale,w_1792.jpg 1792w"
+              ./images/michael1/michael1_qoevng_c_scale,w_200.jpg 200w,
+              ./images/michael1/michael1_qoevng_c_scale,w_477.jpg 477w,
+              ./images/michael1/michael1_qoevng_c_scale,w_677.jpg 677w,
+              ./images/michael1/michael1_qoevng_c_scale,w_850.jpg 850w,
+              ./images/michael1/michael1_qoevng_c_scale,w_1103.jpg 1103w,
+              ./images/michael1/michael1_qoevng_c_scale,w_1254.jpg 1254w,
+              ./images/michael1/michael1_qoevng_c_scale,w_1345.jpg 1345w,
+              ./images/michael1/michael1_qoevng_c_scale,w_1463.jpg 1463w,
+              ./images/michael1/michael1_qoevng_c_scale,w_1541.jpg 1541w,
+              ./images/michael1/michael1_qoevng_c_scale,w_1633.jpg 1633w,
+              ./images/michael1/michael1_qoevng_c_scale,w_1792.jpg 1792w"
             src="/images/michael1/michael1_qoevng_c_scale,w_1792.jpg"
-            alt="">
+            alt="portrait of Michael">
             <img id="michael2"
-            src="images/Michael2.png"
-            alt="Portrait of Michael"
-            width="448"
-            height="563"
-          />
+            sizes="(min-width: 45rem) 21.01vw, (min-width: 38.75rem) 32rem, calc(82.67vw + 2rem)"
+            srcset="
+              ./images/michael2/Michael2_fagqkk_c_scale,w_200.png 200w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_389.png 389w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_514.png 514w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_641.png 641w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_721.png 721w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_776.png 776w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_796.png 796w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_1080.png 1080w"
+            src="/images/michael2/Michael2_fagqkk_c_scale,w_1080.png"
+            alt=" portrait of Michael"
+          >
+            
           </div>
         </section>
   
@@ -143,7 +154,7 @@
           <h2>About</h2>
           <p>
             Hi, I’m Michael, an interaction and motion designer who loves creating
-            unique <a href="">projects</a>. Currently a student at Simon Fraser University’s
+            unique <a class="can-hover" href="">projects</a>. Currently a student at Simon Fraser University’s
             Interactive Arts and Technology program, I am committed to improving
             my design skills by delving into its history, dissecting the
             methodologies of past designers, and understanding the contextual
@@ -155,11 +166,11 @@
         </section>
         <section class="work">
               <a class="card can-hover" href="ddw.html">
-                <div class="proj-name upper">Dutch <span>Design Week</span></div>
+                <div class="proj-name ">Dutch <span>Design Week</span></div>
                 <p>A five week information design class microsite</p>
-                
-
+              
               </a>
+
   
         </section>
       </main>
