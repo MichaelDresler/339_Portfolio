@@ -7,7 +7,13 @@ var ddw=lottie.loadAnimation({
 
   })
 
+  function hover(src) {
+    document.getElementById('thumbnail').setAttribute('src', src);
+}
 
+function unhover(src) {
+    document.getElementById('thumbnail').setAttribute('src', src);
+}
 
 //  ddw.addEventListener("complete",e => {
 //   setTimeout(()=> {

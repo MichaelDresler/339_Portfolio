@@ -11,7 +11,7 @@ var body = document.body,
 var height = Math.max(body.scrollHeight, body.offsetHeight,
   html.clientHeight, html.scrollHeight, html.offsetHeight);
 
-let  stroke = getComputedStyle(document.documentElement).getPropertyValue('--color-primary');;
+let  stroke = getComputedStyle(document.documentElement).getPropertyValue('--color-header');;
 canvas.width = window.innerWidth;
 canvas.height = height
 
@@ -30,8 +30,9 @@ const mouse = {
 }
 
 document.querySelector("#theme-switcher").addEventListener("click",()=>{
-  stroke = getComputedStyle(document.documentElement).getPropertyValue('--color-primary-dark');
-  console.log(stroke)
+  stroke = getComputedStyle(document.documentElement).getPropertyValue('--color-background');
+  ctx.strokeStyle =  stroke
+
 })
 
 
@@ -49,7 +50,7 @@ class Corner {
     // ctx.fillRect(this.x,this.y,this.size,this.size)
     ctx.save();
     ctx.translate(this.x, this.y)
-    ctx.strokeStyle = stroke
+
 
     if (this.id == "br") {
       ctx.rotate(Math.PI);
@@ -113,7 +114,9 @@ function throttle(callback, delay) {
 window.addEventListener("mousemove", throttle(function (event) {
   mouse.x = event.pageX;
   mouse.y = event.pageY;
-  console.log("firing")
+  // console.log("firing")
+  // console.log(ctx.strokeStyle)
+
 }, 50)); // Adjust the delay as needed
 
 const bRightCorner = new Corner(mouse.x, mouse.y, "br")

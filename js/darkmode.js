@@ -11,3 +11,14 @@ const switchTheme = () =>{
 }
 
 document.querySelector("#theme-switcher").addEventListener("click",switchTheme)
+
+function hover(src) {
+    document.getElementById('thumbnail').setAttribute('src', src);
+    document.getElementById('thumbnail').style.opacity = 100;
+    console.log("picture hover")
+}
+
+function unhover(src) {
+    // document.getElementById('thumbnail').setAttribute('src', src);
+    document.getElementById('thumbnail').style.opacity = 0;
+}

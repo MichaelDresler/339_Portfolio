@@ -1,18 +1,20 @@
 
 /* @import url(variables.css); */
 :root[data-theme= "dark"]{
-    --color-primary:white;
-    --color-primary-dark:rgb(26, 26, 26);
-    color:var(--color-primary);
-    background-color: var(--color-primary-dark);
+    --color-background:#1a1a1a;
+    --color-header:white;
+    --color-text: #b3b3b3;
+    color:var(--color-header);
+    background-color: var(--color-background);
 
 }
 
 :root[data-theme= "light"]{
-    --color-primary:rgb(26, 26, 26);
-    --color-primary-dark:white;
-    color:var(--color-primary);
-    background-color: var(--color-primary-dark);
+    --color-background: white;
+    --color-header:#1a1a1a;
+    --color-text: #4e4e4e;
+    color:var(--color-header);
+    background-color: var(--color-background);
 
 }
 
@@ -49,14 +51,14 @@ body{
 p,li,.proj-title,.primary-header a,.proj-card{
     font-family: "univers-light";
     /* font-size: 1.25rem; */
-    color:#b3b3b3;
+    color:var(--color-text);
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
 
 }
 
 .can-hover:hover{
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
-    color:white
+    color:var(--color-header)
 }
 
 
