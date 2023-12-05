@@ -30,12 +30,12 @@ li,ul {
 }
 
 .canvas1{
+
     position:absolute;
     z-index: 202202002;
     width: 100vw;
 
     pointer-events: none;
-
 
     margin: 0;
 }

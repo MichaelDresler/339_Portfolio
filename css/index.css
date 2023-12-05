@@ -1,6 +1,5 @@
 
 
-
 .hero{
     position: relative;
 
@@ -9,8 +8,8 @@
 
 main{
     margin:0 6vw;
+    
 }
-
 
 
 
@@ -102,34 +101,41 @@ h1 span{
 
 
 
-.card-image img{
-width: auto;
-    height: 100%;
-    object-fit: contain;
-
-}
 
 .work{
     margin-block: 10rem;
 
 }
+#contact{
+    height: 10rem;
+
+}
 
 
 .card{
-    display: block;
+    display: flex;
+    justify-content: space-between;
     padding-block: 4rem;
+    align-items: center;
 
     /* outline: 4px solid black; */
-    height:min(70vh, 22rem);
+    /* height:min(70vh, 22rem); */
     /* background-color:red; */
     overflow: hidden;
     /* margin:0 */
 }
+.image-container{
+    height:10vw
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+}
 .proj-name{
-    font-size: 8rem;
+    font-size: clamp(2.25rem, 5vw, 4rem);
     font-weight: 200;
-    letter-spacing: -.4rem;
-    line-height: 8rem;
+    letter-spacing: -.2rem;
+    /* line-height: 8rem; */
 }
 
 .proj-name span{
@@ -182,15 +188,16 @@ width: auto;
 
 
 
-    .about{
+    .layout{
         margin-top: 10rem;
         display: grid;
         grid-template-columns: 1fr 1.33fr;
     }
-    .about h2{
+     h2{
         /* text-transform: uppercase; */
-        font-size: 4rem;
-        letter-spacing: -.1rem;
+        font-size: clamp(2rem, 4vw + 1rem, 6rem);
+        letter-spacing: -.2rem;
+        font-weight: 200;
         margin:0
     }
 

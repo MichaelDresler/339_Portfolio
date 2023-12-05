@@ -1,0 +1,10 @@
+Citations
+Used this to understand how canvas works so I could make a custom cursor
+Franks laboratory. (2021, February 12). HTML5 Canvas CRASH COURSE for beginners [Video]. YouTube. https://www.youtube.com/watch?v=Yvz_axxWG4Y
+
+Used this to create the glimmer effect on my photos
+Ilja van Eck. (2023, July 4). Creating an award-winning page transition in Webflow using GSAP [Video]. YouTube. https://www.youtube.com/watch?v=1l1GNa9ni9w
+
+used this to learn Gsap library
+DocsHome | GSAP | Docs & Learning. (n.d.). https://gsap.com/docs/v3/
+

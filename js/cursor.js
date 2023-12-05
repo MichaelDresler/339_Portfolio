@@ -174,7 +174,7 @@ for (let i = 0; i < divLength; i++) {
 function resize() {
   canvas.width = window.innerWidth;
   canvas.height = height
-  console.log("working?")
+  // console.log(window.innerwidth)
 }
 
 // window.onresize = reportWindowSize;

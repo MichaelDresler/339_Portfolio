@@ -24,15 +24,15 @@
     <script src="js/grid-animation.js" defer></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.28/bundled/lenis.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
-    <!-- <script src="js/lenis.js"></script> -->
+
+
   </head>
   <body onresize="resize()">
     <canvas class="canvas1"></canvas>  
 
         <header class="primary-header" id="navbar">
           <span class="justify-start">
-            <li><a class="can-hover" href="index.html">Michael Dresler</a></li>
+            <a class="can-hover" href="index.html">Michael Dresler</a>
           </span>
     
           <button class="mobile-nav-toggle can-hover" aria-label="navigation">
@@ -42,7 +42,7 @@
           <nav>
             <ul data-visible="false" class="primary-nav">
               <li><a class="can-hover" href="#about">About</a></li>
-              <li><a class="can-hover" href="contact.html">Contact</a></li>
+              <li><a class="can-hover" href="#contact">Contact</a></li>
               <li><a class="can-hover" href="ddw.html">Work</a></li>
               <li><div class="can-hover" id="theme-switcher">Light</div></li>
 
@@ -153,21 +153,39 @@
           </div>
         </section>
   
-        <section class="about" id="about">
+        <section class="layout" id="about">
           <h2>About</h2>
           <p>
-            Hi, I'm Michael, a  designer with an interest in the intersection of design  and code.
+            Hi, I'm Michael, a designer and developer currently at Simon Fraser University’s Interactive Arts and Technology program. I'm passionate about merging my design and coding skills to create immersive experiences. I explore design history to inform my approach and understand the contextual evolution that shapes today's design landscape
           </p>
         </section>
-        <section class="work">
+        <section class="layout" id="projects">
+          <h2>Projects</h2>
               <a class="card can-hover" href="ddw.html">
-                <div class="proj-name ">Dutch <span>Design Week</span></div>
-                <p>A five week information design class microsite</p>
-              
+                <div description>
+                  <h2 class="proj-name ">Dutch Design Week</h2>
+                  <p>A five week information design class microsite</p>
+                </div>
+                <div class="image-container">
+                  <img src="./images/ddw-thumbnail.png" alt="ddw project thumbnail">
+                </div>
+
               </a>
 
   
         </section>
+        <section class="layout" id="contact">
+          <h2>Contact</h2>
+          <div>
+            <p>you can get it touch with me here:</p>
+            <ul>
+              <li>MichaelDresler@hotmail.com</li>
+              <li ><a class="can-hover" href="https://www.linkedin.com/in/michael-dresler-610146200/">LinkedIn</a></li>
+            </ul>
+          </div>
+
+        </section>
+
       </main>
       <footer></footer>
       
