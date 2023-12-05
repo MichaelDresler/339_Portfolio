@@ -1,13 +1,9 @@
 
 
-body{
-    /* margin:0 6vw;/ */
-    /* cursor: none; */
 
-    transition: var(--default-transition);
-}
 .hero{
     position: relative;
+
     
 }
 
@@ -145,65 +141,9 @@ width: auto;
 
 @media screen and (min-width:45rem) {
 
-    .cursor-container{
-        position: fixed;
-        z-index: 10000;
-
-        pointer-events: none;
-    }
-    .cursor-parent{
-        position: unset;
-
-    }
-    .cursor-item{
-        position: absolute;
-        width: .5rem ;
-        height: .5rem ;
-        /* transition: translate() .5s; */
-    }
-    .cursor-item:nth-child(1){
-        border-top: 1.5px solid var(--color-primary);
-        border-left: 1.5px solid var(--color-primary);
-        top: 0;
-        left: 0;
-
-        /* left:0; */
-        /* top:0; */
-        /* transform: translate(100px,200px); */
-        
-        transition: .5s;
-
-    }
-
-    .cursor-item:nth-child(2){
-        border-top: 1.5px solid var(--color-primary);
-        border-right: 1.5px solid var(--color-primary);
-/* 
-        right:0;
-        top:0; */
-        top: 0;
-        left: 100%;
-
-        transition: .5s;
-
-    }
-    .cursor-item:nth-child(3){
-        border-bottom: 1.5px solid var(--color-primary);
-        border-left: 1.5px solid var(--color-primary);
-
- 
-        transition: .5s;
-    }
-    .cursor-item:nth-child(4){
-        border-bottom: 1.5px solid var(--color-primary);
-        border-right: 1.5px solid var(--color-primary);
-        top: 100%;
-        left: 100%;
-        transition: .5s;
-    }
     
     .title{
-        font-size: clamp(2.25rem, 8vw + 1rem, 16rem);
+        font-size: clamp(2.25rem, 8vw + 1rem, 12rem);
 
     }
 
@@ -256,17 +196,5 @@ width: auto;
 
 
 
-    /* .card{
-        display: grid;
-        grid-template-columns: 1fr 1.33fr;
-    }
-
-    .card-description{
-        padding-top:8rem;
-    }
-
-    .right{
-        grid-template-columns: 1.33fr 1fr;
-    } */
 }
 

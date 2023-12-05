@@ -1,9 +1,9 @@
 var ddw=lottie.loadAnimation({
-    container: document.getElementById('animation'),
+    container: document.querySelector('.animation'),
     renderer: 'svg',
     loop: false,
     autoplay: true,
-    path: 'work.json'
+    path: 'ddw.json'
 
   })
 

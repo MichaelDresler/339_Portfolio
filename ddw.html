@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme = 'light'>
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,10 +7,10 @@
 
     <script>
       let localS = localStorage.getItem("theme");
-      if(localS === "dark"){
-        document.documentElement.setAttribute('data-theme', "dark")
+      if (localS === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
       }
-      </script>
+    </script>
     <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
     <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
@@ -30,9 +30,12 @@
     <!-- <canvas class="canvas1"></canvas> -->
     <header class="primary-header" id="navbar">
       <span class="justify-start"
-        ><a href="index.html">Michael Dresler</a></span>
+        ><a href="index.html">Michael Dresler</a></span
+      >
 
-      <button class="mobile-nav-toggle" aria-label="navigation"></button>
+      <button class="mobile-nav-toggle" aria-label="navigation">
+        <svg class="burger" xmlns="http://www.w3.org/2000/svg"  height="24" viewBox="0 0 24 24" width="24"  ><path d="M0 0h24v24H0z"  fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      </button>
 
       <nav>
         <ul data-visible="false" class="primary-nav">
@@ -56,7 +59,7 @@
     </noscript>
 
     <div class="ddw-hero">
-      <div id="animation">
+      <div class="animation">
         <script src="js/animation.js"></script>
       </div>
     </div>
@@ -67,19 +70,16 @@
         <span class="nl">Branding & visual identity microsite</span>
       </h1>
       <section class="about">
-
         <div id="project-description">
           <h2>About</h2>
           <p>
             In this second-year information design class, we worked on a 5-week
             project to create a captivating microsite for Dutch Design Week, an
-            annual design conference. The project aimed to establish an
-            intuitive and comprehensive platform that guided visitors through
-            the diverse offerings of the festival which hosts over 100 events
-            with a global audience. In the creation of the Dutch Design Week
-            microsite, I played a pivotal role in shaping the interaction
-            design, developing mockups, incorporating motion design, and
-            contributing to research.
+            annual design conference. The initial three weeks were dedicated to
+            visual experimentation, where we explored design qualities and
+            principles to help guide our decisions. During this phase, our
+            exploration aimed to create a flexible visual direction that could
+            define the unique identity of the microsite.
           </p>
         </div>
         <div id="roles">
@@ -89,7 +89,7 @@
               <li>Michael Dresler,</li>
               <li>Madeline Ho,</li>
               <li>Brianna Mei,</li>
-              <li>Christina Raganit,  </li>
+              <li>Christina Raganit,</li>
               <li>Simon Wong</li>
             </ul>
           </div>
@@ -117,72 +117,54 @@
           </div>
         </div>
       </section>
-      <section class="content">
-        <div class="title">
-          <h2>Content Design</h2>
-          <p>
-            Our goal was to empower visitors with a strategic planning tool.
-            Utilizing content design, we provide detailed insights into
-            schedules, locations, and unique aspects of each exhibition. This
-            approach allows attendees to optimize their schedules, making the
-            most of their time at Dutch Design Week.
-          </p>
+      <section class="image-grid" id="visual-identity">
+        <h2>01 Final Visual Identity</h2>
+        <div class="image-content flex">
+          <img src="./images/red.png" alt="posters from visual identity" />
+          <img src="./images/blue.png" alt="posters from visual identity" />
+          <img src="./images/yellow.png" alt="posters from visual identity" />
         </div>
-        <div class="card left">
-          <div class="image"></div>
-          <h3>Navigation</h3>
-          <p>
-            The dropdown navigation helps declutter the homepage and offer a
-            dedicated space for easy navigation. The animation of typography
-            within the dropdown also adds dynamism, making the navigation
-            experience more memorable.
-          </p>
+
+        <div class="image-content">
+          <img src="./images/tunnel.png" alt="posters from visual identity" />
         </div>
-        <div class="card Right">
-          <div class="image"></div>
-          <h3>Event Page</h3>
-          <p>
-            The event page served as a dynamic planning tool, organized by date
-            and time, with alphabetical ordering for simultaneous events. Filter
-            chips were introduced, allowing users to customize their exploration
-            based on date, time, discipline, and location. .
-          </p>
-        </div>
-        <div class="card left">
-          <div class="image"></div>
-          <h3>Personalized Itinerary</h3>
-          <p>
-            Recognizing the vastness of Dutch Design Week, the itinerary aims to
-            offer attendees a tool that not only optimizes their schedules but
-            also fosters a sense of personalization and control over their
-            festival experience..
-          </p>
-        </div>
-        <div class="card right">
-          <div class="image"></div>
-          <h3>Navigation</h3>
-          <p>
-            The dropdown navigation helps declutter the homepage and offer a
-            dedicated space for easy navigation. The animation of typography
-            within the dropdown also adds dynamism, making the navigation
-            experience more memorable.
-          </p>
+        <div class="image-content two-col">
+          <img src="./images/hotel.png" alt="posters from visual identity" />
+          <img src="./images/train.png" alt="posters from visual identity" />
         </div>
       </section>
-      <section class="assets">
-        <div class="title">
-          <h2>Graphic Assets</h2>
-          <p>
-            When creating mockups, my focus shifted towards identifying
-            locations and landmarks in the Netherlands that held cultural
-            relevance, ensuring that every visual element communicated a
-            connection to the rich tapestry of Dutch culture.
-          </p>
+      <section class="image-grid" id="process">
+        <h2>02 Process </h2>
+        <p>
+          The first two weeks were spent exploring different visual identities.
+          We were assigned designer, Massimo Vignelli and studied his work to
+          surface qualities and principles that we could use help influence are
+          graphic exploration. This exercise was a valuable learning experience in understanding why mockups are important. I thought they were to get a sense of what our posters would look like in a real-world context but, I soon found out they provide much more than that. As a result, these assets were rather weak.
+        </p>
+        <div class="image-content flex">
+          <img src="./images/ddw-bri.png" alt="posters from visual identity" />
+          <img src="./images/house of memeories.png" alt="posters from visual identity" />
+          <img src="./images/ddw-old.png" alt="posters from visual identity" />
         </div>
-        <div class="image"></div>
-        <div class="image"></div>
-        <div class="image"></div>
-        <div class="image"></div>
+
+        <div class="image-content">
+          <img src="./images/assets/ddw-bri-asset.png" alt="posters from visual identity" />
+        </div>
+        <div class="image-content two-col">
+          <img src="./images/assets/hom-asset-2.png" alt="posters from visual identity" />
+          <img src="./images/assets/tote-asset.png" alt="posters from visual identity" />
+        </div>
+      </section>
+      <section id="refinement">
+        <h2>03 Context Driven Assets</h2>
+        <p>
+           After receiving feedback from the teaching team and Learning from my previous iterations, I realized that the mockups should showcase a design inspired by the qualities of the poster, not just the poster itself. My new goal became to 1. create mockups that showcase the flexibility  and versatility of the visual identity and 2. Use locations and landmarks within a geographical context to add cultural significance.
+        </p>
+
+        <div class="image-content">
+          <img src="./images/image grouping.png" alt="posters from visual identity" />
+        </div>
+
       </section>
     </main>
     <footer></footer>

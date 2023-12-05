@@ -158,12 +158,12 @@ function handleMouseEnter() {
   rect = this.getBoundingClientRect();
   initialScroll = window.scrollY;
   hovering = true;
-  damp = 0.04;
+  damp = 0.08;
 }
 
 function handleMouseLeave() {
   hovering = false;
-  damp = 0.05;
+  damp = 0.07;
 }
 
 for (let i = 0; i < divLength; i++) {
