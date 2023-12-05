@@ -15,6 +15,7 @@ let  stroke = getComputedStyle(document.documentElement).getPropertyValue('--col
 canvas.width = window.innerWidth;
 canvas.height = height
 
+
 ctx.lineWidth = 2;
 
 
@@ -122,7 +123,7 @@ const bLeftCorner = new Corner(mouse.x, mouse.y, "bl")
 
 
 function animate() {
-  ctx.clearRect(0, 0, canvas.width, height);
+  ctx.clearRect(0, 0, window.innerWidth, height);
   if (!hovering) {
     bRightCorner.moveTo(mouse.x, mouse.y);
     tRightCorner.moveTo(mouse.x, mouse.y);
@@ -170,6 +171,9 @@ for (let i = 0; i < divLength; i++) {
   divs[i].addEventListener("mouseenter", handleMouseEnter);
   divs[i].addEventListener("mouseleave", handleMouseLeave);
 }
+
+
+
 
 function resize() {
   canvas.width = window.innerWidth;

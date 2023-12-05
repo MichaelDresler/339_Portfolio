@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme = 'light'>
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,10 +7,10 @@
 
     <script>
       let localS = localStorage.getItem("theme");
-      if(localS === "dark"){
-        document.documentElement.setAttribute('data-theme', "dark")
+      if (localS === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
       }
-      </script>
+    </script>
 
     <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
@@ -22,176 +22,183 @@
     <script src="js/cursor.js" defer></script>
     <script src="js/darkmode.js" defer></script>
     <script src="js/grid-animation.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.28/bundled/lenis.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.28/bundled/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-
   </head>
   <body onresize="resize()">
-    <canvas class="canvas1"></canvas>  
+    <canvas class="canvas1"></canvas>
 
-        <header class="primary-header" id="navbar">
-          <span class="justify-start">
-            <a class="can-hover" href="index.html">Michael Dresler</a>
-          </span>
-    
-          <button class="mobile-nav-toggle can-hover" aria-label="navigation">
-            <svg class="burger" xmlns="http://www.w3.org/2000/svg"  height="36" viewBox="0 0 24 24" width="36"  ><path d="M0 0h24v24H0z"  fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-          </button>
-    
-          <nav>
-            <ul data-visible="false" class="primary-nav">
-              <li><a class="can-hover" href="#about">About</a></li>
-              <li><a class="can-hover" href="#contact">Contact</a></li>
-              <li><a class="can-hover" href="ddw.html">Work</a></li>
-              <li><div class="can-hover" id="theme-switcher">Light</div></li>
+    <header class="primary-header" id="navbar">
+      <span class="justify-start">
+        <a class="can-hover" href="index.html">Michael Dresler</a>
+      </span>
 
-            </ul>
-          </nav>
-        </header>
-    
-        <noscript>
-          <header class="nojs">
-            <nav class="links">
-              <a href="./index.html">Home</a>
-              <a href="#about">About</a>
-              <a href="./contact.html">Contact</a>
-              <a href="./shop.html">Shop</a>
-            </nav>
-          </header>
-        </noscript>
-        <main>
-        <section class="hero" >
-          <h1 class="title" >
-            <span class="span-one">Interaction</span>
-            <span class="span-two">+ Motion</span>
-            <span class="span-three">Designer &</span>
-            <span class="span-four"> Developer</span>
-          </h1>
-          <div class="portrait "onclick="changeImage()" >
-            <div class="load-grid" >
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-              <div class="grid-item"></div>
-            </div>
-            <img id="michael1"
+      <button class="mobile-nav-toggle can-hover" aria-label="navigation">
+        <svg
+          class="burger"
+          xmlns="http://www.w3.org/2000/svg"
+          height="36"
+          viewBox="0 0 24 24"
+          width="36"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+        </svg>
+      </button>
+
+      <nav>
+        <ul data-visible="false" class="primary-nav">
+          <li><a class="can-hover" href="#about">About</a></li>
+          <li><a class="can-hover" href="#contact">Contact</a></li>
+          <li><a class="can-hover" href="ddw.html">Work</a></li>
+          <li><div class="can-hover" id="theme-switcher">Light</div></li>
+        </ul>
+      </nav>
+    </header>
+
+    <noscript>
+      <header class="nojs">
+        <nav class="links">
+          <a href="./index.html">Home</a>
+          <a href="#about">About</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./shop.html">Shop</a>
+        </nav>
+      </header>
+    </noscript>
+    <main>
+      <section class="hero">
+        <h1 class="title">
+          <span class="span-one">Interaction</span>
+          <span class="span-two">+ Motion</span>
+          <span class="span-three">Designer &</span>
+          <span class="span-four"> Developer</span>
+        </h1>
+        <div class="portrait" onclick="changeImage()">
+          <div class="load-grid">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+          </div>
+          <img
+            id="michael1"
             sizes="(min-width: 45rem) 21.01vw, (min-width: 38.75rem) 32rem, calc(82.67vw + 2rem)"
             srcset="
-              ./images/michael1/michael1_qoevng_c_scale,w_200.jpg 200w,
-              ./images/michael1/michael1_qoevng_c_scale,w_477.jpg 477w,
-              ./images/michael1/michael1_qoevng_c_scale,w_677.jpg 677w,
-              ./images/michael1/michael1_qoevng_c_scale,w_850.jpg 850w,
+              ./images/michael1/michael1_qoevng_c_scale,w_200.jpg   200w,
+              ./images/michael1/michael1_qoevng_c_scale,w_477.jpg   477w,
+              ./images/michael1/michael1_qoevng_c_scale,w_677.jpg   677w,
+              ./images/michael1/michael1_qoevng_c_scale,w_850.jpg   850w,
               ./images/michael1/michael1_qoevng_c_scale,w_1103.jpg 1103w,
               ./images/michael1/michael1_qoevng_c_scale,w_1254.jpg 1254w,
               ./images/michael1/michael1_qoevng_c_scale,w_1345.jpg 1345w,
               ./images/michael1/michael1_qoevng_c_scale,w_1463.jpg 1463w,
               ./images/michael1/michael1_qoevng_c_scale,w_1541.jpg 1541w,
               ./images/michael1/michael1_qoevng_c_scale,w_1633.jpg 1633w,
-              ./images/michael1/michael1_qoevng_c_scale,w_1792.jpg 1792w"
+              ./images/michael1/michael1_qoevng_c_scale,w_1792.jpg 1792w
+            "
             src="/images/michael1/michael1_qoevng_c_scale,w_1792.jpg"
-            alt="portrait of Michael">
-            <img id="michael2"
+            alt="portrait of Michael"
+          />
+          <img
+            id="michael2"
             sizes="(min-width: 45rem) 21.01vw, (min-width: 38.75rem) 32rem, calc(82.67vw + 2rem)"
             srcset="
-              ./images/michael2/Michael2_fagqkk_c_scale,w_200.png 200w,
-              ./images/michael2/Michael2_fagqkk_c_scale,w_389.png 389w,
-              ./images/michael2/Michael2_fagqkk_c_scale,w_514.png 514w,
-              ./images/michael2/Michael2_fagqkk_c_scale,w_641.png 641w,
-              ./images/michael2/Michael2_fagqkk_c_scale,w_721.png 721w,
-              ./images/michael2/Michael2_fagqkk_c_scale,w_776.png 776w,
-              ./images/michael2/Michael2_fagqkk_c_scale,w_796.png 796w,
-              ./images/michael2/Michael2_fagqkk_c_scale,w_1080.png 1080w"
+              ./images/michael2/Michael2_fagqkk_c_scale,w_200.png   200w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_389.png   389w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_514.png   514w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_641.png   641w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_721.png   721w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_776.png   776w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_796.png   796w,
+              ./images/michael2/Michael2_fagqkk_c_scale,w_1080.png 1080w
+            "
             src="/images/michael2/Michael2_fagqkk_c_scale,w_1080.png"
             alt=" portrait of Michael"
-          >
-            
-          </div>
-        </section>
-  
-        <section class="layout" id="about">
-          <h2>About</h2>
-          <p>
-            Hi, I'm Michael, a designer and developer currently at Simon Fraser University’s Interactive Arts and Technology program. I'm passionate about merging my design and coding skills to create immersive experiences. I explore design history to inform my approach and understand the contextual evolution that shapes today's design landscape
-          </p>
-        </section>
-        <section class="layout" id="projects">
-          <h2>Projects</h2>
-              <a class="card can-hover" href="ddw.html">
-                <div description>
-                  <h2 class="proj-name ">Dutch Design Week</h2>
-                  <p>A five week information design class microsite</p>
-                </div>
-                <div class="image-container">
-                  <img src="./images/ddw-thumbnail.png" alt="ddw project thumbnail">
-                </div>
+          />
+        </div>
+      </section>
 
-              </a>
+      <section class="layout two-col" id="about">
+        <h2>About</h2>
+        <p>
+          Hi, I'm Michael, a designer and developer currently at Simon Fraser
+          University’s Interactive Arts and Technology program. I'm passionate
+          about merging my design and coding skills to create immersive
+          experiences. I explore design history to inform my approach and
+          understand the contextual evolution that shapes today's design
+          landscape
+        </p>
+      </section>
+      <section class="layout" id="projects">
+        <h2>Projects</h2>
+        <div class="proj-links">
+          <a class="proj-card can-hover" href="ddw.html"> Dutch Design Week </a>
+          <a class="proj-card can-hover" href="ddw.html"> Cheeky's Cannabis </a>
+        </div>
 
-  
-        </section>
-        <section class="layout" id="contact">
-          <h2>Contact</h2>
-          <div>
-            <p>you can get it touch with me here:</p>
-            <ul>
-              <li>MichaelDresler@hotmail.com</li>
-              <li ><a class="can-hover" href="https://www.linkedin.com/in/michael-dresler-610146200/">LinkedIn</a></li>
-            </ul>
-          </div>
-
-        </section>
-
-      </main>
-      <footer></footer>
-      
-
-
-
+      </section>
+      <section class="layout" id="contact">
+        <h2> Contact Me ⊂(◉‿◉)つ</h2>
+        <div>
+          <p>you can get it touch with me here:</p>
+          <ul>
+            <li>MichaelDresler@hotmail.com</li>
+            <li>
+              <a
+                class="can-hover"
+                href="https://www.linkedin.com/in/michael-dresler-610146200/"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
   </body>
 </html>
-
