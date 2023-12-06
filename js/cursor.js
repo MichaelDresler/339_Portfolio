@@ -11,7 +11,7 @@ var body = document.body,
 var height = Math.max(body.scrollHeight, body.offsetHeight,
   html.clientHeight, html.scrollHeight, html.offsetHeight);
 
-let  stroke = getComputedStyle(document.documentElement).getPropertyValue('--color-header');;
+let  stroke = getComputedStyle(document.documentElement).getPropertyValue('--color-cursor');;
 canvas.width = window.innerWidth;
 canvas.height = height
 
@@ -30,7 +30,7 @@ const mouse = {
 }
 
 document.querySelector("#theme-switcher").addEventListener("click",()=>{
-  stroke = getComputedStyle(document.documentElement).getPropertyValue('--color-background');
+  stroke = getComputedStyle(document.documentElement).getPropertyValue('--color-cursor');
   ctx.strokeStyle =  stroke
 
 })

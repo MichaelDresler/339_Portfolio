@@ -4,6 +4,7 @@
     --color-background:#1a1a1a;
     --color-header:white;
     --color-text: #b3b3b3;
+    --color-cursor: #ffffff;
     color:var(--color-header);
     background-color: var(--color-background);
 
@@ -13,6 +14,7 @@
     --color-background: white;
     --color-header:#1a1a1a;
     --color-text: #4e4e4e;
+    --color-cursor: #ffffff;
     color:var(--color-header);
     background-color: var(--color-background);
 
@@ -22,6 +24,15 @@
     font-family: "univers";
     --default-transition: color .3s ease-in-out, background-color .3s, ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
 }
+input:focus-visible{
+    /* background-color: red; */
+    outline:3px solid rgb(255, 128, 0);
+    transition:border 0s;
+
+
+}
+
+
 html{
     scroll-behavior: smooth;
 
@@ -41,23 +52,23 @@ body{
 
     z-index: 202202002;
     width: 100%;
-    /* border:1px solid red; */
+    /* border: 3px solid red; */
     /* box-sizing: border-box; */
     pointer-events: none;
-
+    mix-blend-mode: difference;
     margin: 0;
 }
 
-p,li,.proj-title,.primary-header a,.proj-card{
+p,li,.proj-title,.primary-header a,.proj-card,label{
     font-family: "univers-light";
     /* font-size: 1.25rem; */
     color:var(--color-text);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
 
 }
 
 .can-hover:hover{
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
     color:var(--color-header)
 }
 

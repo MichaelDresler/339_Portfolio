@@ -17,6 +17,11 @@
     <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="./css/nav.css" />
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <script src="js/nav.js" defer></script>
     <script src="js/cursor.js" defer></script>
@@ -50,7 +55,7 @@
         <ul data-visible="false" class="primary-nav">
           <li><a class="can-hover" href="#about">About</a></li>
           <li><a class="can-hover" href="#contact">Contact</a></li>
-          <li><a class="can-hover" href="ddw.html">Work</a></li>
+          <li><a class="can-hover" href="#projects">Work</a></li>
           <li><div class="can-hover" id="theme-switcher">Light</div></li>
         </ul>
       </nav>
@@ -177,24 +182,61 @@
       <section class="layout" id="projects">
         <h2>Projects</h2>
         <div class="proj-links">
-          <a class="proj-card can-hover" href="ddw.html"onmouseover="hover('images/train.png');" onmouseout="unhover();" > Dutch Design Week </a>
-          <a class="proj-card can-hover" href="ddw.html"onmouseover="hover('images/red.png');" onmouseout="unhover();" > Cheeky's Cannabis </a>
-
+          <a
+            class="proj-card can-hover"
+            href="ddw.html"
+            onmouseover="hover('images/rootful.png');"
+            onmouseout="unhover();"
+            ><span> Dutch Design Week </span></a
+          >
+          <a
+            class="proj-card can-hover"
+            href="ddw.html"
+            onmouseover="hover('images/red.png');"
+            onmouseout="unhover();"
+            ><span> Cheeky's cannabis</span></a
+          >
         </div>
-        <img id="thumbnail" src="" alt="" >
+        <div class="image-container">
+          <img id="thumbnail" src="" alt="project thumbnail" />
+        </div>
       </section>
       <section class="layout" id="contact">
-        <h2>Contact Me </h2>
+        <h2>Contact Me</h2>
+        <!-- <a
+          class="can-hover"
+          href="https://www.linkedin.com/in/michael-dresler-610146200/"
+          >LinkedIn</a
+        >
         <a
-        class="can-hover"
-        href="https://www.linkedin.com/in/michael-dresler-610146200/"
-        >LinkedIn</a>
-        <a
-        class="can-hover"
-        href="https://www.linkedin.com/in/michael-dresler-610146200/"
-        >LinkedIn</a>
-        <h2>⊂(◉‿◉)<span class="wave">つ</span></h2>
+          class="can-hover"
+          href="https://www.linkedin.com/in/michael-dresler-610146200/"
+          >LinkedIn</a
+        > -->
 
+          <form action="">
+            <div class="info-container">
+    
+              <div class="can-hover input-container">
+                <label for="fname">Full name*</label>
+                <input class="contact-info" type="text" id="fname" name="fname" />
+              </div>
+              <div class="can-hover input-container">
+                <label for="email">Email*</label>
+                <input class="contact-info" type="text" id="email" name="email" />
+              </div>
+              <div class="can-hover input-container">
+                <label for="lname">Message*</label>
+                <input class="contact-info" class="" type="text" id="lname" name="lname" />
+              </div>
+              <div id="emoji">⊂(◉‿◉)<span class="wave">つ</span></div>
+
+              <input class="can-hover submit" type="submit" value="Submit" />
+
+            </div>
+
+          </form>
+ 
 
       </section>
     </main>

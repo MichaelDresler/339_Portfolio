@@ -8,6 +8,7 @@
 
 main{
     margin:0 6vw;
+    margin-left:12vw ;
     counter-reset: section;
     
 }
@@ -99,9 +100,7 @@ h1 span{
     
 }
 
-.image-container{
-    height:10vw
-}
+
 .image-container img{
     width: 100%;
     height: 100%;
@@ -112,17 +111,25 @@ h1 span{
     display: flex;
     padding-block:1rem;
     align-items: center;
-    font-size: 2rem;
-    /* font-weight: 600; */
-    transform-origin:  left;
-    transition: .75s;
     height:5rem;
+
 }
-.proj-card:hover{
-    /* font-size: 4rem; */
+.proj-card span{
+    transform-origin:  left;
+    font-size: 2rem;
+    transition: .5s;
+
+
+
+}
+
+.proj-card:hover  span{
     transform: scale(1.25);
-    font-weight: 500;
-    transition: .75s;
+    transition: .5s;
+    text-shadow: -.5px -.5px 0 ,
+    .5px -.5px 0 ,
+    -.5px .5px 0 ,
+    .5px .5px 0 ;
 
 }
 
@@ -134,20 +141,13 @@ h1 span{
 
 .layout{
     margin-block: 8rem;
-    margin-left: 6vw;
-
-
+    position: relative;
 }
-.layout::before{
-    counter-increment: section;
-    content:"("  counter(section) ")";
-    position: absolute;
-    /* left:3rem; */
-    font-size: 1.5rem;
-    transform: translate(-120%,55% );
-    counter-increment: section;
 
+.image-container{
+    display: none;
 }
+
 
 .layout h2{
     font-size: 3rem;
@@ -164,7 +164,140 @@ h1 span{
 
 
 }
+
+label{
+    font-size: 1.5rem;
+}
+
+.input-container{
+    padding-block:1rem;
+
+}
+.contact-info{
+    display: block;
+    width:100%;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 2px solid var(--color-text);
+    font-size: 1.5rem;
+    font-family: "univers-light";
+    margin-block:1rem;
+    color: var(--color-text);
+}
+:focus-visible{
+    outline:3px solid rgb(255, 128, 0);
+}
+
+input:focus-visible{
+    /* background-color: red; */
+    outline:3px solid rgb(255, 128, 0);
+    transition:border 0s;
+
+}
+
+
+.contact-container{
+    margin-block: 2rem;
+}
+
+/* form .input-container:hover ~ #emoji .wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    transform-origin: left;
+    animation-iteration-count: infinite;
+
+    display: inline-block;
+} */
+
+form .input-container:hover ~ #emoji .wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    transform-origin: left;
+    animation-iteration-count: infinite;
+
+    display: inline-block;
+}
+
+.info-container{
+    display: inline-block;
+    width: 100%;
+
+}
+
+
+.submit{
+
+width: 100%;
+height:4rem;
+font-size: 1.5rem;
+text-transform: uppercase;
+margin-top: 2rem;
+
+}
+.submit:hover{
+
+    color: black;
+    
+    }
+
+
+#emoji{
+    margin-block: 2rem;
+    font-size: clamp(1rem, 4vw + 1rem, 6rem);;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate( 0.0deg)
+    }
+    10% {
+        transform: rotate(-25.0deg)
+    }
+    20% {
+        transform: rotate(8.0deg)
+    }
+    30% {
+        transform: rotate(-25.0deg)
+    }
+    40% {
+        transform: rotate(4.0deg)
+    }
+    50% {
+        transform: rotate(-19.0deg)
+    }
+    60% {
+        transform: rotate( 0.0deg)
+    }
+    100% {
+        transform: rotate( 0.0deg)
+    }
+}
+
+@media screen and (min-width:32rem) {
+    #emoji{
+        position: absolute;
+        top: 0;
+        right:0;
+    }
+
+    .layout::before{
+        counter-increment: section;
+        content:"("counter(section)")";
+        position: absolute;
+        transform-origin: bottom left;
+        font-size: clamp(2.25rem, 2vw + 1rem, 6rem);
+        /* font-size: 2rem; */
+        transform: translate(-120%,20% );
+    }
+
+}
+
+
+
+
 @media screen and (min-width:45rem) {
+
+
 
     
     .title{
@@ -172,11 +305,17 @@ h1 span{
 
     }
 
+    .layout{
+        margin-left: 4vw;
+    }
+    label{
+        font-size: 2rem;
+    }
+
+
     .layout::before{
-        font-size: clamp(2.25rem, 2vw + 1rem, 6rem);
-        /* font-size: 2rem; */
-        transform: translate(-120%,35% );
-    
+
+        transform: translate(-120%,18% );
     }
 
     .layout h2{
@@ -188,6 +327,10 @@ h1 span{
         max-width: 70rem;
         margin-block-start:0
     
+    }
+
+    .image-container{
+        display: block;
     }
 
 
@@ -226,18 +369,26 @@ h1 span{
 
     .layout{
         margin-top: 10rem;
-        position: relative;
+ 
 
     }
-
-    .layout img{
+    .image-container{
         position: absolute;
-        /* opacity: 50%; */
-        width:50%;
+        width: 50%;
+        aspect-ratio: 16/9;
         right: 0;
         top: 0;
+
+    }
+
+    .image-container img{
+        object-fit: cover;
+        /* opacity: 50%; */
+        width:100%;
+
    
     }
+
     
     #thumbnail{
         transition: all .4s ease;
@@ -249,41 +400,22 @@ h1 span{
         grid-template-columns: 1fr 1.33fr;
     }
 
-    .can-hover:hover ~ h2 .wave {
-        animation-name: wave-animation;
-        animation-duration: 2.5s;
-        transform-origin: left;
-        animation-iteration-count: infinite;
-        /* transform-origin: 70% 70%; */
-        display: inline-block;
-    }
     
-    @keyframes wave-animation {
-        0% {
-            transform: rotate( 0.0deg)
-        }
-        10% {
-            transform: rotate(-25.0deg)
-        }
-        20% {
-            transform: rotate(8.0deg)
-        }
-        30% {
-            transform: rotate(-25.0deg)
-        }
-        40% {
-            transform: rotate(4.0deg)
-        }
-        50% {
-            transform: rotate(-19.0deg)
-        }
-        60% {
-            transform: rotate( 0.0deg)
-        }
-        100% {
-            transform: rotate( 0.0deg)
-        }
+.submit{
+
+    padding: 0;
+    float: right;
+    width:10rem;
+    height: 3.5rem;
+
+}
+
+    .info-container{
+
+        width: clamp(8rem, 66vw, 50rem);
     }
+
+
 
 
 }
