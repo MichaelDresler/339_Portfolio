@@ -8,7 +8,7 @@
 
 main{
     margin:0 6vw;
-    margin-left:12vw ;
+
     counter-reset: section;
     
 }
@@ -200,14 +200,6 @@ input:focus-visible{
     margin-block: 2rem;
 }
 
-/* form .input-container:hover ~ #emoji .wave {
-    animation-name: wave-animation;
-    animation-duration: 2.5s;
-    transform-origin: left;
-    animation-iteration-count: infinite;
-
-    display: inline-block;
-} */
 
 form .input-container:hover ~ #emoji .wave {
     animation-name: wave-animation;
@@ -232,6 +224,9 @@ height:4rem;
 font-size: 1.5rem;
 text-transform: uppercase;
 margin-top: 2rem;
+background-color: var(--color-header);
+color: var(--color-background);;
+border-style: none;
 
 }
 .submit:hover{
@@ -243,7 +238,7 @@ margin-top: 2rem;
 
 #emoji{
     margin-block: 2rem;
-    font-size: clamp(1rem, 4vw + 1rem, 6rem);;
+    font-size: clamp(1rem, 4vw + 1rem, 6rem);
 }
 
 @keyframes wave-animation {

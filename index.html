@@ -18,9 +18,9 @@
     <link rel="stylesheet" type="text/css" href="./css/nav.css" />
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
     
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
     <script src="js/nav.js" defer></script>
@@ -64,10 +64,10 @@
     <noscript>
       <header class="nojs">
         <nav class="links">
-          <a href="./index.html">Home</a>
+          <a href="./index.html">Michael Dresler</a>
           <a href="#about">About</a>
-          <a href="./contact.html">Contact</a>
-          <a href="./shop.html">Shop</a>
+          <a href="#contact">Contact</a>
+          <a href="#projects">Work</a>
         </nav>
       </header>
     </noscript>
@@ -146,7 +146,7 @@
               ./images/michael1/michael1_qoevng_c_scale,w_1633.jpg 1633w,
               ./images/michael1/michael1_qoevng_c_scale,w_1792.jpg 1792w
             "
-            src="/images/michael1/michael1_qoevng_c_scale,w_1792.jpg"
+            src="./images/michael1/michael1_qoevng_c_scale,w_1792.jpg"
             alt="portrait of Michael"
           />
           <img
@@ -162,8 +162,8 @@
               ./images/michael2/Michael2_fagqkk_c_scale,w_796.png   796w,
               ./images/michael2/Michael2_fagqkk_c_scale,w_1080.png 1080w
             "
-            src="/images/michael2/Michael2_fagqkk_c_scale,w_1080.png"
-            alt=" portrait of Michael"
+            src="./images/michael2/Michael2_fagqkk_c_scale,w_1080.png"
+            alt=" illustration of Michael in black and white"
           />
         </div>
       </section>
@@ -185,20 +185,24 @@
           <a
             class="proj-card can-hover"
             href="ddw.html"
+            onfocus="hover('images/rootful.png');"
             onmouseover="hover('images/rootful.png');"
             onmouseout="unhover();"
+            onblur="unhover();"
             ><span> Dutch Design Week </span></a
           >
           <a
             class="proj-card can-hover"
             href="ddw.html"
+            onfocus="hover('images/red.png');"
             onmouseover="hover('images/red.png');"
             onmouseout="unhover();"
+            onblur="unhover();"
             ><span> Cheeky's cannabis</span></a
           >
         </div>
         <div class="image-container">
-          <img id="thumbnail" src="" alt="project thumbnail" />
+          <img id="thumbnail" src="images/train.png" alt="project thumbnail" />
         </div>
       </section>
       <section class="layout" id="contact">
@@ -214,7 +218,7 @@
           >LinkedIn</a
         > -->
 
-          <form action="">
+          <form action="#">
             <div class="info-container">
     
               <div class="can-hover input-container">
@@ -227,7 +231,7 @@
               </div>
               <div class="can-hover input-container">
                 <label for="lname">Message*</label>
-                <input class="contact-info" class="" type="text" id="lname" name="lname" />
+                <input class="contact-info" type="text" id="lname" name="lname" />
               </div>
               <div id="emoji">⊂(◉‿◉)<span class="wave">つ</span></div>
 

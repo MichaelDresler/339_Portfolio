@@ -24,13 +24,7 @@
     font-family: "univers";
     --default-transition: color .3s ease-in-out, background-color .3s, ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
 }
-input:focus-visible{
-    /* background-color: red; */
-    outline:3px solid rgb(255, 128, 0);
-    transition:border 0s;
 
-
-}
 
 
 html{
