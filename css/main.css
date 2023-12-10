@@ -2,9 +2,11 @@
 /* @import url(variables.css); */
 :root[data-theme= "dark"]{
     --color-background:#1a1a1a;
-    --color-header:white;
+    --color-main-header: white;
+    --color-header:#e1e1e1;
     --color-text: #b3b3b3;
     --color-cursor: #ffffff;
+    --color-decoration: #6877FF;
     color:var(--color-header);
     background-color: var(--color-background);
 
@@ -12,20 +14,24 @@
 
 :root[data-theme= "light"]{
     --color-background: white;
+    --color-main-header: black;
     --color-header:#1a1a1a;
     --color-text: #4e4e4e;
     --color-cursor: #ffffff;
+    --color-decoration: #6877FF;
     color:var(--color-header);
     background-color: var(--color-background);
 
 }
 
 :root {
-    font-family: "univers";
+    font-family: "univers-light";
     --default-transition: color .3s ease-in-out, background-color .3s, ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
 }
 
-
+p{
+    margin: 0;
+}
 
 html{
     scroll-behavior: smooth;
@@ -36,26 +42,23 @@ li,ul {
     margin: 0;
     padding: 0;
 }
-body{
 
-}
 
 .canvas1{
 
     position:absolute;
-
     z-index: 202202002;
     width: 100%;
+    top:0;
     /* border: 3px solid red; */
-    /* box-sizing: border-box; */
     pointer-events: none;
     mix-blend-mode: difference;
     margin: 0;
 }
 
 p,li,.proj-title,.primary-header a,.proj-card,label{
-    font-family: "univers-light";
-    /* font-size: 1.25rem; */
+
+    font-size: 1.25rem;
     color:var(--color-text);
     transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
 
@@ -86,7 +89,7 @@ a{
 
 @media screen and (min-width: 30rem){
     P{
-        font-size: calc(1.25rem + 10 * (100vw - 30rem) / 760);
+        /* font-size: calc(1.25rem + 10 * (100vw - 30rem) / 760); */
     }
     
 

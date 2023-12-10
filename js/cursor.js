@@ -7,12 +7,15 @@ let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight
 var initialScroll
 var body = document.body,
   html = document.documentElement;
+  
 
 var height = Math.max(body.scrollHeight, body.offsetHeight,
   html.clientHeight, html.scrollHeight, html.offsetHeight);
 
-let  stroke = getComputedStyle(document.documentElement).getPropertyValue('--color-cursor');;
-canvas.width = window.innerWidth;
+let scrollBarWidth = getScrollBarWidth();
+
+let stroke = getComputedStyle(document.documentElement).getPropertyValue('--color-cursor');;
+canvas.width = window.innerWidth - scrollBarWidth;
 canvas.height = height
 
 
@@ -21,7 +24,7 @@ ctx.lineWidth = 2;
 
 
 let hovering = false
-let damp = 0.2
+let damp = 0.08
 var rect
 
 const mouse = {
@@ -29,11 +32,11 @@ const mouse = {
   y: null,
 }
 
-document.querySelector("#theme-switcher").addEventListener("click",()=>{
-  stroke = getComputedStyle(document.documentElement).getPropertyValue('--color-cursor');
-  ctx.strokeStyle =  stroke
+// document.querySelector("#theme-switcher").addEventListener("click",()=>{
+//   stroke = getComputedStyle(document.documentElement).getPropertyValue('--color-cursor');
+//   ctx.strokeStyle =  stroke
 
-})
+// })
 
 
 class Corner {
@@ -69,6 +72,14 @@ class Corner {
     ctx.restore()
     ctx.strokeStyle = stroke
 
+  }
+  setPos(x, y) {
+    this.x = x;
+    this.y = y;
+
+  }
+  getPos() {
+    return this.y
   }
 
 
@@ -126,12 +137,14 @@ const bLeftCorner = new Corner(mouse.x, mouse.y, "bl")
 
 
 function animate() {
-  ctx.clearRect(0, 0, window.innerWidth, height);
+
+  ctx.clearRect(0, 0, window.innerWidth -scrollBarWidth, height);
   if (!hovering) {
     bRightCorner.moveTo(mouse.x, mouse.y);
     tRightCorner.moveTo(mouse.x, mouse.y);
     bLeftCorner.moveTo(mouse.x, mouse.y);
     tLeftCorner.moveTo(mouse.x, mouse.y)
+
 
   }
   else {
@@ -139,6 +152,8 @@ function animate() {
     tRightCorner.moveTo(rect.x + rect.width, rect.y + initialScroll)
     bRightCorner.moveTo(rect.x + rect.width, rect.y + rect.height + initialScroll)
     bLeftCorner.moveTo(rect.x, rect.y + rect.height + initialScroll)
+
+
 
   }
 
@@ -170,19 +185,57 @@ function handleMouseLeave() {
   damp = 0.07;
 }
 
+
+
+window.addEventListener("scroll", () => {
+
+  if (window.innerWidth < 600) {
+
+    for (let i = 0; i < divLength; i++) {
+      let currentDiv = divs[i].getBoundingClientRect()
+
+      if (currentDiv.y - (vh / 2) < 0 && (currentDiv.y + currentDiv.height) - vh / 2 > 0) {
+        hovering = true;
+        divs[i].classList.add("highlight");
+        rect = currentDiv
+        initialScroll = window.scrollY;
+      }
+      else{
+        divs[i].classList.remove("highlight");
+        // divs[i].style.transition  = ".5s"
+
+      }
+
+    }
+  }
+
+})
+
 for (let i = 0; i < divLength; i++) {
   divs[i].addEventListener("mouseenter", handleMouseEnter);
   divs[i].addEventListener("mouseleave", handleMouseLeave);
+
 }
 
 
 
 
 function resize() {
-  canvas.width = window.innerWidth;
+  canvas.width = window.innerWidth -scrollBarWidth;
   canvas.height = height
-  // console.log(window.innerwidth)
+
+
 }
+
+function getScrollBarWidth() {
+  let el = document.createElement("div");
+  el.style.cssText = "overflow:scroll; visibility:hidden; position:absolute;";
+  document.body.appendChild(el);
+  let width = el.offsetWidth - el.clientWidth;
+  el.remove();
+  return width;
+}
+
 
 // window.onresize = reportWindowSize;
 

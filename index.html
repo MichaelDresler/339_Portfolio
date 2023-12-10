@@ -165,20 +165,33 @@
         </div>
       </section>
 
-      <section class="layout two-col" id="about">
-        <h2>About</h2>
-        <p>
-          Hi, I'm Michael, a designer and developer currently at Simon Fraser
-          University’s Interactive Arts and Technology program. I'm passionate
-          about merging my design and coding skills to create immersive
-          experiences. I explore design history to inform my approach and
-          understand the contextual evolution that shapes today's design
-          landscape
-        </p>
+      <section class="layout" id="about">
+        <div>
+          <h2>About <span class="decoration">01</span></h2>
+          <p id="about-paragraph">
+            Hi, I'm Michael, a designer and developer currently at Simon Fraser
+            University’s Interactive Arts and Technology program. I'm passionate
+            about merging my design and coding skills to create immersive
+            experiences. I explore design history to inform my approach and
+            understand the contextual evolution that shapes today's design
+            landscape
+          </p>
+        </div>
+
+        <div class="socials">
+          <p>vancouver-based <span class="nl">designer and developer</span></p>
+          <ul>
+            <li ><a class="can-hover" href="">Github</a></li>
+            <li><a class="can-hover" href="https://www.linkedin.com/in/michael-dresler-610146200/">LinkedIn</a></li>
+          </ul>
+        </div>
       </section>
       <section class="layout" id="projects">
-        <h2>Projects</h2>
+        <h2>Featured  <span id="proj-nl"><span class="decoration">02</span><span id="title-margin">Projects</span></span></h2>
         <div class="proj-links">
+          <div class="image-container">
+            <img id="thumbnail" src="images/train.png" alt="project thumbnail" />
+          </div>
           <a
             class="proj-card can-hover"
             href="ddw.html"
@@ -186,34 +199,51 @@
             onmouseover="hover('images/rootful.png');"
             onmouseout="unhover();"
             onblur="unhover();"
-            ><span> Dutch Design Week </span></a
+            ><span> Dutch Design Week </span> 
+            <div class="tag-container">
+              <div class="tag">Branding</div>
+              <div class="tag">visual design</div>
+            </div></a
           >
           <a
             class="proj-card can-hover"
             href="ddw.html"
-            onfocus="hover('images/red.png');"
-            onmouseover="hover('images/red.png');"
+            onfocus="hover('images/cheeky.png');"
+            onmouseover="hover('images/cheeky.png');"
             onmouseout="unhover();"
             onblur="unhover();"
-            ><span> Cheeky's cannabis</span></a
+            ><span> Cheeky's Cannabis</span>
+            <div class="tag-container">
+              <div class="tag">Branding</div>
+
+              <div class="tag">UX</div>
+              
+            </div></a
           >
+          <a
+          class="proj-card can-hover"
+          href="ddw.html"
+          onfocus="hover('images/bytebot.png');"
+          onmouseover="hover('images/bytebot.png');"
+          onmouseout="unhover();"
+          onblur="unhover();"
+          ><span> Byte Bot</span></a
+        >
+        <a
+        class="proj-card can-hover"
+        href="ddw.html"
+        onfocus="hover('images/red.png');"
+        onmouseover="hover('images/red.png');"
+        onmouseout="unhover();"
+        onblur="unhover();"
+        ><span>Daisy 7094</span></a
+      >
+
         </div>
-        <div class="image-container">
-          <img id="thumbnail" src="images/train.png" alt="project thumbnail" />
-        </div>
+
       </section>
       <section class="layout" id="contact">
         <h2>Contact Me</h2>
-        <!-- <a
-          class="can-hover"
-          href="https://www.linkedin.com/in/michael-dresler-610146200/"
-          >LinkedIn</a
-        >
-        <a
-          class="can-hover"
-          href="https://www.linkedin.com/in/michael-dresler-610146200/"
-          >LinkedIn</a
-        > -->
 
           <form action="#">
             <div class="info-container">
@@ -226,9 +256,9 @@
                 <label for="email">Email*</label>
                 <input class="contact-info" type="text" id="email" name="email" />
               </div>
-              <div class="can-hover input-container">
-                <label for="lname">Message*</label>
-                <input class="contact-info" type="text" id="lname" name="lname" />
+              <div class="can-hover input-container" id="messagebox">
+                <label for="message">Message*</label>
+                <textarea class="contact-info" name="message" id="message" cols="1" rows="10"></textarea>
               </div>
               <div id="emoji">⊂(◉‿◉)<span class="wave">つ</span></div>
 
